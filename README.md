@@ -1,2 +1,8 @@
 # helloWorld
-This is a test for learning to create a new repository.
+public static void main(String args[]) {
+  System.out.println("Hello,World!");
+}
+
+int main() {
+  std::cout<<"Hello,World!";
+}
