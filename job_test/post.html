@@ -9,8 +9,8 @@
 <script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script><script src="http://cdn.tencentgroup.qq.com/join_static/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="http://cdn.tencentgroup.qq.com/join_static/js/jquery.drag.js" type="text/javascript"></script>
 <script src="http://cdn.tencentgroup.qq.com/join_static/js/fn.js?max_age=86402&amp;v=140827" type="text/javascript"></script>
-<script src="http://cdn.tencentgroup.qq.com/join_static/js/all.js?max_age=86402&amp;v=140827" type="text/javascript"></script>
-<link href="http://cdn.tencentgroup.qq.com/join_static/favicon.ico" type="image/ico" rel="shortcut icon">
+<!--<script src="http://cdn.tencentgroup.qq.com/join_static/js/all.js?max_age=86402&amp;v=140827" type="text/javascript"></script>
+<link href="http://cdn.tencentgroup.qq.com/join_static/favicon.ico" type="image/ico" rel="shortcut icon">-->
 <!--[if lt IE 7]>
 <script>var file_root = 'http://cdn.tencentgroup.qq.com/join_static/';</script>
 <script type="text/javascript" src="http://cdn.tencentgroup.qq.com/join_static/js/unitpngfix.js"></script>
@@ -20,8 +20,10 @@
 [class^="qq_topAd"] {display:none!important;display:none}[id="bb9c190068b8405587e5006f905e790c"]{display:none;position:absolute;top:-1000000px;visibility:hidden}
 body{background: #FFFFFF;}
 </style>
-<script language="javascript" type="text/javascript" src="http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js" charset="gb2312"></script><script type="text/javascript">
-hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.2524812112096697"></script></head>
+<!--<script language="javascript" type="text/javascript" src="http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js" charset="gb2312"></script>
+<script type="text/javascript">hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script>-->
+<script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.2524812112096697"></script>
+</head>
 <body id="postpage">
 	<!--
 <div id="heardout" class="unitPng"><div id="header" class="width980">
@@ -58,7 +60,7 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
         <div class="menu_area">
             <ul class="menu_list">
                 <li class=" "><!--添加类名 current 显示隐藏子菜单-->
-                    <a href="index.html" class="menu_item">校园招聘</a>
+                    <a href="index.html" class="menu_item">首页</a>
                 </li>
                 <li class=" "><!--添加类名 current 显示隐藏子菜单-->
                     <a href="javascript:void(0);" class="menu_item" target="_blank">牛人专项</a>
@@ -72,6 +74,18 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
                     </div>
                 </li>
                 <li>
+                	<a href="post.html" class="menu_item">招聘岗位</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu_item">行程安排</a>
+                    <div class="sub_menu">
+                    	<ul class="sub_menu_list">
+                    		<li><a href="flow.html">校招流程</a></li>
+                    		<li><a href="plan.html">宣讲行程</a></li>
+                    	</ul>
+                    </div>
+                </li>
+                <li>
                     <a href="#" class="menu_item">走进腾讯</a>
                     <div class="sub_menu">
                         <ul class="sub_menu_list">
@@ -79,12 +93,6 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
                             <li><a href="liveIn.html">人在腾讯</a></li>
                         </ul>
                     </div>
-                </li>
-                <li>
-                    <a href="flow.html" class="menu_item">校招流程</a>
-                </li>
-                <li>
-                    <a href="plan.html" class="menu_item">宣讲行程</a>
                 </li>
             </ul>
         </div>
@@ -98,10 +106,10 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
 		<div class="contdiv">
 			<div class="l left">
 				<ul class="leftul">	
-					<li><a class="active" href="post.html?pl=1">技术类</a></li>	
+					<!--<li><a class="active" href="post.html?pl=1">技术类</a></li>	
 					<li><a href="post.html?pl=2">产品类</a></li>	
 					<li><a href="post.html?pl=3">设计类</a></li>	
-					<li><a href="post.html?pl=4">市场/职能类</a></li>
+					<li><a href="post.html?pl=4">市场/职能类</a></li>-->
 				</ul>
 			</div>
 			<div class="r right">
@@ -223,20 +231,27 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
 
 	<!--<script type="text/javascript" src="http://cw.zun315.com:8080/ssa.ashx?yyh=07230" id="d997ed0e-d1a3-4bec"></script>-->
 	<script>
-		$(function() {
-			//获取url中的参数，pl是左边栏展示信息，pr是右边栏详细信息
-			var myUrll = getQueryString("pl");
+		//页面重新加载时，调用onload事件
+		/*window.onload = function() {
+			//获取url中的参数
 			var myUrlr = getQueryString("pr");
-			
 			//判断url中参数，并根据参数获取不同的展示数据
-			if (myUrll != null && myUrll.toString().length > 1) {
-				showData(myUrll);
-			}else if (myUrlr != null && myUrlr.toString().length > 1) {
+			if (myUrlr != null && myUrlr.toString().length > 1) {
 				showData(myUrlr);
-			}else if (myUrll == null && myUrlr == null) {
-				showData()
+			}else if (myUrlr == null) {
+				showData("");
 			}
-
+		}*/
+		//页面重新加载时，调用ready事件
+		$(function() {
+			//获取url中的参数
+			var myUrlr = getQueryString("pr");
+			//判断url中参数，并根据参数获取不同的展示数据
+			if (myUrlr != null && myUrlr.toString().length > 1) {
+				showData(myUrlr);
+			}else if (myUrlr == null) {
+				showData("");
+			}
 		});
 		
 		//获取url中的参数，并进行封装，返回参数值
@@ -248,52 +263,338 @@ hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script><script src="htt
 			}
 			return null;
 		}
-		
+
+		//myUrl参数为1表示技术类，2表示产品类，3表示设计类，空表示技术类（默认）
 		function showData(myUrl) {
 			var dataString_up = "";
 			var dataString_dn = "";
-			dataString_up = "<a class='active' href='post.html?pr=11'>软件开发</a>"
-						+"<a href='post.html?pr=12'>安全技术</a>"
-						+"<a href='post.html?pr=13'>软件测试</a>"
-						+"<a href='post.html?pr=14'>基础研究</a>"
-						+"<div class='clr'></div>";
-			dataString_dn = "<div class='item'>"
-						+"<div class='t'>岗位方向：</div>"
-						+"<select name='post'>"
-						+"<option selected='selected' value='101'>--软件开发-后台开发方向--</option>"
-						+"<option value='102'>--软件开发-PC客户端开发方向--</option>"
-						+"<option value='103'>--软件开发-移动客户端开发方向--</option>"
-						+"<option value='106'>--软件开发-Web前端开发方向--</option>"
-						+"</select>"
-						+"</div>"
-						+"<div class='item'>"
-						+"<div class='t'>岗位描述</div>"
-						+"<div class='desc'>从事腾讯产品服务后台的架构设计、开发、优化及运营工作；使用最优秀的架构设计及算法实现，在网络接入、业务运行逻辑、用户数据存储、业务数据挖掘等方向，为海量互联网用户提供稳定、安全、高效和可靠的专业后台支撑体系。</div>"
-						+"</div>"
-						+"<div class='item'>"
-						+"<div class='t'>岗位要求</div>"
-						+"<div class='desc'>编程基本功扎实，掌握C/C++/JAVA等开发语言、常用算法和数据结构；"
-						+"<br>熟悉TCP/UDP网络协议及相关编程、进程间通讯编程；"
-						+"<br>了解Python、Shell、Perl等脚本语言；"
-						+"<br>了解MYSQL及SQL语言、编程，了解NoSQL,&nbsp;key-value存储原理；"
-						+"<br>全面、扎实的软件知识结构，掌握操作系统、软件工程、设计模式、数据结构、数据库系统、网络安全等专业知识；"
-						+"<br>了解分布式系统设计与开发、负载均衡技术，系统容灾设计，高可用系统等知识。"
-						+"<br>"
-						+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
-						+"<br>"
-						+"</div>"
-						+"</div>"
-						+"<div class='item'>"
-						+"<div class='t'>工作地点</div>"
-						+"<div class='desc'>深圳 广州 北京 成都 </div>"
-						+"</div>"
-						+"<div class='item'>"
-						+"<div class='t'>招聘城市</div>"
-						+"<div class='desc'>远程面试 </div>"
-						+"</div>"
-						+"<div class='height20'></div>"
-						+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
-						+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			var dataString_lt = "";
+			
+			if(myUrl == "" || myUrl == "1" || myUrl == "11") {
+				dataString_lt = "<li><a class='active' href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a class='active' href='post.html?pr=11'>软件开发</a>"
+							+"<a href='post.html?pr=12'>安全技术</a>"
+							+"<a href='post.html?pr=13'>软件测试</a>"
+							+"<a href='post.html?pr=14'>基础研究</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位方向：</div>"
+							+"<select name='post'>"
+							+"<option selected='selected' value='101'>--软件开发-后台开发方向--</option>"
+							+"<option value='102'>--软件开发-PC客户端开发方向--</option>"
+							+"<option value='103'>--软件开发-移动客户端开发方向--</option>"
+							+"<option value='106'>--软件开发-Web前端开发方向--</option>"
+							+"</select>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>从事腾讯产品服务后台的架构设计、开发、优化及运营工作；使用最优秀的架构设计及算法实现，在网络接入、业务运行逻辑、用户数据存储、业务数据挖掘等方向，为海量互联网用户提供稳定、安全、高效和可靠的专业后台支撑体系。</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>编程基本功扎实，掌握C/C++/JAVA等开发语言、常用算法和数据结构；"
+							+"<br>熟悉TCP/UDP网络协议及相关编程、进程间通讯编程；"
+							+"<br>了解Python、Shell、Perl等脚本语言；"
+							+"<br>了解MYSQL及SQL语言、编程，了解NoSQL,&nbsp;key-value存储原理；"
+							+"<br>全面、扎实的软件知识结构，掌握操作系统、软件工程、设计模式、数据结构、数据库系统、网络安全等专业知识；"
+							+"<br>了解分布式系统设计与开发、负载均衡技术，系统容灾设计，高可用系统等知识。"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 广州 北京 成都 </div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "2" || myUrl == "21") {
+				dataString_lt = "<li><a href='post.html?pr=11'>技术类</a></li>"
+							+"<li><a class='active' href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a class='active' href='post.html?pr=21'>Games Operation Talents</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>Department: Interactive Entertainment Group(IEG)<div>"
+							+"</br>You will take responsibility within, but not limited to, areas of game optimization, cross function, cross culture communication, project management and game localization."
+							+"</br>"
+							+"</br>Operation Elite Camp Description"
+							+"</br>The top 20 Games Operation Talents will be chosen to join the Operation Elite Camp."
+							+"</br>Operation Elite Camp will go through 1.5 years of systematic training in the field of game operation. Elites will be coached and challenged within the frames of Tencent Game, and will be expected to have the capacity to take key roles in game operation, publishing and marketing."
+							+"</br>Operation Elite Camp will provide you:"
+							+"</br>Training: Game industry insight, Cross-Culture communication, Basic skills, Leadership, etc."
+							+"</br>Coaching: 1 Product Introduction Center tutor, 1 Publish Line Project tutor, 1 HR tutor, 1 GM sponsor."
+							+"</br>Rotation: 6 months in Product Introduction Center, 12 months in the overseas game project team."
+							+"</br>"
+							+"**If you want to apply for this position, Please attach your answer for this question 'If you have a chance to operate your favorite game, what would you do to optimize it, eg, performance, user retention, monetization?''(Please answer in English) along with your resume.'</br>"
+							+"</div>"
+							+"</br>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>Recent graduates (0-2 years) from top tier overseas universities."
+							+"<br>Passion in games and game industry "
+							+"<br>Ability to handle high pressure in a fast paced environment."
+							+"<br> Good English and Chinese oral and written skills"
+							+"<br>Team player with excellent communication and interpersonal skill"
+							+"<br> Experience in game development, publishing, and operation is a plus."
+							+"<br>"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 广州 北京 成都 </div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			}else if (myUrl == "31") {
+				dataString_lt = "<li><a href='post.html?pr=11'>技术类</a></li>"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a class='active' href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a class='active' href='post.html?pr=31'>视觉设计</a>"
+							+"<a href='post.html?pr=32'>UI设计开发</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>这里汇聚了全国乃至全球在软件、网站、品牌领域的优秀视觉设计师、专家达人。您将有机会与最专业的团队合作触动亿万人的情感和引流互联网时尚潮流。在这里你能获得最有效的设计方法、最真诚的帮助和最有价值的成长。让你的工作被全中国的人感知，让你的设计触动全世界。</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>美术、设计相关专业本科或研究生，综合素质扎实，热爱设计行业； "
+							+"<br>有一定的设计理论知识和对流行趋势敏锐的洞察力；"
+							+"<br>富于创新、思维灵活，并对先进的设计理念和技术有较强的理解能力； "
+							+"<br>能够熟练使用Photoshop、Flash、Illustrator等软件； "
+							+"<br>良好的沟通能力和团队协作精神，能承受高强度的工作压力； "
+							+"<br>有相关行业经验或是实习经验者优先。"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 广州</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "41") {
+				dataString_lt = "<li><a href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a class='active' href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a class='active' href='post.html?pr=41'>投资分析实习生</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>Investment Analyst (Intern)</br>Department: Mergers and Acquisitions</div>"
+							+"</br>"
+							+"Roles & Responsibilities :</br>"
+							+"• Lead industry and economic research activities with a focus on the Internet field</br>"
+							+"• Participate and contribute in deal sourcing, evaluation, due diligence and deal execution process</br>"
+							+"• Participate and contribute in post deal company research activities</br>"
+							+"• Enhance and maintain the team’s knowledge base</br>"
+							+"</br>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>• Strong interest, passion, and business sense for Internet, investment and Tencent"
+							+"<br>• High level of integrity, dedication and motivation"
+							+"<br>• Bachelor/Master degree from top schools; ALL majors are welcomed "
+							+"<br>• Internship experience with top consulting firms and/or investment banks is a strong plus"
+							+"<br>• Excellent problem solving skills; Solid critical thinking skills"
+							+"<br>• Fluency in English and Chinese"
+							+"<br>"
+							+"<br>该岗位必须上传PDF版简历"
+							+"<br>该岗位单独招聘，面试时间为10月中下旬"
+							+"<br>"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 北京</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "12") {
+				dataString_lt = "<li><a class='active' href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a href='post.html?pr=11'>软件开发</a>"
+							+"<a class='active' href='post.html?pr=12'>安全技术</a>"
+							+"<a href='post.html?pr=13'>软件测试</a>"
+							+"<a href='post.html?pr=14'>基础研究</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>为腾讯旗下所有业务、产品和用户制定安全规范流程，指导业务部门进行安全设计、开发、测试和运营。 研究业界最新网络安全攻防技术，为腾讯量身定制严密的安全方案及研发稳固的安全系统，为腾讯产品及亿万用户保驾护航！</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>热爱互联网，对操作系统和网络安全有狂热的追求，专业不限；"
+							+"<br>熟悉漏洞挖掘、网络安全攻防技术，了解常见黑客攻击手法； "
+							+"<br>掌握基本开发能力，熟练使用C/C++语言； "
+							+"<br>对数据库、操作系统、网络原理有较好掌握；  "
+							+"<br>具有软件逆向，网络安全攻防或安全系统开发经验者优先。 "
+							+"<br>"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "13") {
+				dataString_lt = "<li><a class='active' href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a href='post.html?pr=11'>软件开发</a>"
+							+"<a href='post.html?pr=12'>安全技术</a>"
+							+"<a class='active' href='post.html?pr=13'>软件测试</a>"
+							+"<a href='post.html?pr=14'>基础研究</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>作为腾讯产品的质量代言人，从事腾讯旗下某产品的软件测试及质量建设等相关工作，能够运用自身的软件设计，分析，编程及用户感知能力，发现或预知产品质量隐患与风险，为腾讯产品的质量、安全及用户体验保驾护航。</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>计算机软件相关专业本科或及以上学历；  "
+							+"<br>掌握软件工程基础知识，熟悉软件测试理论和方法，逻辑思维能力强； "
+							+"<br>有良好的计算机理论基础，熟悉操作系统及网络的基本原理，至少掌握1门编程语言；"
+							+"<br>具备扎实的代码走读能力，熟悉各类常用debug类工具；   "
+							+"<br>追求完美、工作细致、能站在用户的角度思考，坚持原则，具备良好的学习能力和质疑习惯。 "
+							+"<br>"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 上海</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "14") {
+				dataString_lt = "<li><a class='active' href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a href='post.html?pr=11'>软件开发</a>"
+							+"<a href='post.html?pr=12'>安全技术</a>"
+							+"<a href='post.html?pr=13'>软件测试</a>"
+							+"<a class='active' href='post.html?pr=14'>基础研究</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>探索和创新前沿互联网技术，将高新技术转化为产品，参与腾讯产品的开发与技术实现。</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>自然语言处理、多媒体、分布式网络、数据分析、智能计算、安全等互联网相关技术具有较深的研究和专业积 "
+							+"<br>累， 具有较好的创新能力和编程开发能力，具备较强的团队合作力。 "
+							+"<br>"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 广州 北京 成都</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			} else if (myUrl == "32") {
+				dataString_lt = "<li><a href='post.html?pr=11'>技术类</a></li>	"
+							+"<li><a href='post.html?pr=21'>产品类</a></li>"
+							+"<li><a class='active' href='post.html?pr=31'>设计类</a></li>"
+							+"<li><a href='post.html?pr=41'>市场类</a></li>";
+				dataString_up = "<a href='post.html?pr=31'>视觉设计</a>"
+							+"<a class='active' href='post.html?pr=32'>UI设计开发</a>"
+							+"<div class='clr'></div>";
+				dataString_dn = "<div class='item'>"
+							+"<div class='t'>岗位描述</div>"
+							+"<div class='desc'>这里有国内最大，用户量最多的海量用户平台，您将会跟一群来自五湖四海的伙伴们一起钻研业界新技术，解决带宽、服务器消耗与炫丽页面呈现之间的矛盾，让用户在极短的时间能便能领略到腾讯各大业务的魅力。</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>岗位要求</div>"
+							+"<div class='desc'>专业不限，综合素质扎实，学科成绩优秀。  "
+							+"<br>深刻理解Web标准，精通图像处理及代码编辑工具，精通Web前端跨平台开发技术（XHTML/XML/CSS/Javascript等），对HTML5/CSS3和性能优化以及SEO有实际的研究和实践经验，了解非Web前端脚本的语言（如Java/PHP/CGI）等。"
+							+"<br>热爱互联网，经常了解业界前瞻信息及应用，并有浓厚的兴趣和深入的见解。 "
+							+"<br>善于学习，有团队协作精神，较强的逻辑分析能力和沟通表达能力。  "
+							+"<br>勇于探索新领域，了解多终端平台(手机，打印机，视障阅读器)研发，对可用性等有实际的理解和实践经验。 "
+							+"<br>有实际项目参与经验或Web Apps开发经验优先。"
+							+"<br>"
+							+"<br>注：该岗位“招聘城市”在简历投递截止日前会有部分调整，请密切关注，腾讯公司对招聘信息保留最终解释权。"
+							+"<br>"
+							+"</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>工作地点</div>"
+							+"<div class='desc'>深圳 广州</div>"
+							+"</div>"
+							+"<div class='item'>"
+							+"<div class='t'>招聘城市</div>"
+							+"<div class='desc'>远程面试 </div>"
+							+"</div>"
+							+"<div class='height20'></div>"
+							+"<a href='apply.php?post=101' class='but1'>申请岗位</a>"
+							+"<div class='notice'>提示：每人只能投递一个职位。</div>";
+			}
+			
+			$(".leftul").append(dataString_lt);
 			$("#post2ul").append(dataString_up);
 			$(".c").append(dataString_dn);	
 		}
