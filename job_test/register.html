@@ -1,9 +1,11 @@
-<html><style type="text/css" id="6916667981"></style><head>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style type="text/css" id="6916667981"></style><head>
 <!-- meta -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="renderer" content="webkit">
 <meta property="qc:admins" content="23635710066417756375">
-<meta name="baidu-site-verification" content="QIQ6KC1oZ6">
+<meta name="baidu-site-verification" content="QIQ6KC1oZ6">-->
 <meta charset="UTF-8">
 
 <title>注册</title>
@@ -11,7 +13,9 @@
 <!--<link rel="Shortcut Icon" href="//img.lagou.com/passport/static/common/static/favicon_faed927.ico">-->
 <!-- header/global_domain FE_base.. -->
 
-<script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=4899764&amp;url=https%3A%2F%2Fpassport.lagou.com%2Fregister%2Fregister.html&amp;source=&amp;rnd=1871091829&amp;hm=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//hm.baidu.com/hm.js?4233e74dff0ae5bd0a3d81c6ccf756e6"></script><script async="" src="//a.lagou.com/js/a.js"></script><script type="text/javascript">
+<!--<script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=4899764&amp;url=https%3A%2F%2Fpassport.lagou.com%2Fregister%2Fregister.html&amp;source=&amp;rnd=1871091829&amp;hm=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//hm.baidu.com/hm.js?4233e74dff0ae5bd0a3d81c6ccf756e6"></script>
+<script async="" src="//a.lagou.com/js/a.js"></script>-->
+<script type="text/javascript">
 /*(function() {
     var protocol = window.location.protocol;
     var host = window.location.host;
@@ -48,19 +52,18 @@
   	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<link rel="stylesheet" type="text/css" href="css/register.css">
 <link rel="stylesheet" type="text/css" href="//img.lagou.com/passport/static/pkg/pc/page/register/main.html_aio_0d4b51f.css">
+
 <style>
 	body{
-			background: url(img/city_4.jpg);
-			background-size: 100%,100%;
+		background: url(img/city_4.jpg);
+		background-size: 100%,100%;
 		}
 	.sso_header1{
 		position: relative;
 		height:300px;
 		width: 100%;
-	}
-	.content_box{
-		
 	}
 </style>
 </head>
@@ -73,7 +76,7 @@
 <header class="sso_header1"></header>
 <section class="content_box cleafix">
 	<div class="left_area fl">
-		<form action="" method="">
+		<form action="login.html" method="">
 			<ul class="form_head clearfix">
 				<!--<li class="active" data-lg-tj-id="18J0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
 					<i class="icon icon_phone"></i>
@@ -110,14 +113,14 @@
 				<div class="input_item clearfix" style="margin-top: 16px; display: block;" data-propertyname="protocol" data-controltype="CheckBox">
 					<label for="checkbox" class="box_checkbox">
 			            <span class="checkbox_icon" style="background-position: -13px 3px;"></span><input type="checkbox" value="" id="checkbox" class="checkbox" data-myvalue="agred" data-text="我已阅读并同意" checked="checked">我已阅读并同意
-			            <a rel="nofollow" href="http://www.lagou.com/privacy.html" target="_blank" style="color:#00b38a" data-lg-tj-id="18L0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">《拉勾用户协议》</a>
+			            <a rel="nofollow" href="http://www.lagou.com/privacy.html" target="_blank" style="color:#00b38a" data-lg-tj-id="18L0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">《 用户协议》</a>
 			        </label>
 				</div>
 				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
 					<input type="button" class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" data-lg-tj-id="1950" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
 				</div>
 			</div>-->
-			<div class="form_body" data-view="emailRegister">
+			<div class="form_body">
 				<div class="input_item clearfix" data-propertyname="email" data-controltype="Email" style="display: block;">
 					<input type="text" class="input input_white" name="" placeholder="请输入常用邮箱地址" data-required="required" autocomplete="off">
 				</div>
@@ -138,12 +141,14 @@
 				</div>-->
 				<div class="input_item clearfix" data-propertyname="protocol" data-controltype="CheckBox" style="display: block;">
 					<label for="checkbox2" class="box_checkbox">
-			            <span class="checkbox_icon" style="background-position: -13px 3px;"></span><input type="checkbox" value="" id="checkbox2" class="checkbox" data-myvalue="agred" data-text="我已阅读并同意" checked="checked">我已阅读并同意
-			            <a rel="nofollow" href="http://www.lagou.com/privacy.html" target="_blank" style="color:#00b38a" data-lg-tj-id="18L0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">《拉勾用户协议》</a>
+			            <!--<span class="checkbox_icon" style="background-position: -13px 3px;"></span>-->
+			            <input type="checkbox" value="" id="checkbox2" checked="checked"/>我已阅读并同意
+			            <a rel="nofollow" href="javascript:void(0);" target="_blank" style="color:#00b38a">《用户协议》</a>
 			        </label>
 				</div>
-				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
-					<input type="button" class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册" data-lg-tj-id="1950" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">
+				<div class="input_item">
+					<!--<input type="submit" class="btn btn_green btn_active btn_block btn_lg" value="注&nbsp;册">-->
+					<button onclick="f()" class="btn btn_green btn_active btn_block btn_lg">注&nbsp;册</button>
 				</div>
 			</div>
 		</form>
@@ -153,8 +158,8 @@
 	</div>
 	
 	<div class="right_area fl">
-		<h5>已有拉勾帐号:</h5>
-		<a href="https://passport.lagou.com/login/login.html" class="login_now" data-lg-tj-id="18N0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">直接登录</a>
+		<h5>已有账号:</h5>
+		<a href="login.html" class="login_now" data-lg-tj-id="18N0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull">直接登录</a>
 		<h5>使用以下帐号直接登录:</h5>
 		<ul class="vender_login clearfix">
 			<li><a rel="nofollow" href="/oauth20/auth_sinaWeiboProvider.html" title="使用新浪微博帐号登录" class="vender_icon icon_sina" target="_blank" data-lg-tj-id="1910" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"></a></li>
@@ -163,7 +168,7 @@
 		</ul>
 		<div class="qrcode">
 			<!--<img src="//img.lagou.com/passport/static/pc/modules/common/img/qrcode_0ec6bff.jpg" alt="二维码">
-			<p>[ 扫码下载拉勾APP ]</p>-->
+			<p>[ 扫码下载 APP ]</p>-->
 		</div>
 	</div>
 </section>
@@ -171,7 +176,7 @@
 <footer>
 	<h4 class="slogan">— 专注人才招聘 —</h4>
 </footer><!-- jquery lib -->
-<!--拉勾UI框架 -->
+<!-- UI框架 -->
 <!-- analytics js file --><!-- plat analytics js file -->
 <!--<script type="text/javascript" src="//img.lagou.com/passport/static/pkg/vendor_c7a7c93.js"></script>
 <script type="text/javascript" src="//img.lagou.com/passport/static/pkg/pc/page/register/main.html_aio_e995440.js"></script>
@@ -181,5 +186,9 @@
    /* require(['pc/page/register/main']);*/
 </script>
 <!--<script type="text/javascript" src="https://passport.lagou.com/upload/oss.js"></script>-->
-
+<script type="text/javascript">
+	function f(){
+		window.location.href="login.html";
+	}
+</script>
 </body></html>
