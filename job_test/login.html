@@ -1,0 +1,134 @@
+<html><head>
+<!-- meta -->
+<meta name="renderer" content="webkit">
+<meta property="qc:admins" content="23635710066417756375">
+<meta name="baidu-site-verification" content="QIQ6KC1oZ6">
+<meta charset="UTF-8">
+
+<title>登录</title>
+
+<!-- header/global_domain FE_base.. -->
+
+<script charset="utf-8" src="https://tag.baidu.com/vcard/v.js?siteid=4899764&amp;url=https%3A%2F%2Fpassport.lagou.com%2Flogin%2Flogin.html&amp;source=&amp;rnd=1700375122&amp;hm=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//hm.baidu.com/hm.js?4233e74dff0ae5bd0a3d81c6ccf756e6"></script><script async="" src="//a.lagou.com/js/a.js"></script><script type="text/javascript">
+/*(function() {
+    var protocol = window.location.protocol;
+    var host = window.location.host;
+    var baseUrl = protocol + '//' + host;
+
+    window.GLOBAL_DOMAIN = window.GLOBAL_DOMAIN || {
+        ctx: protocol + '//www.lagou.com',
+        rctx: protocol + '//hr.lagou.com',
+        crctx: protocol + '//hr.lagou.com/company',
+        pctx: protocol + '//passport.lagou.com',
+        actx: protocol + '//account.lagou.com',
+        paictx: protocol + '//pai.lagou.com',
+        sctx: protocol + '//suggest.lagou.com',
+        zctx: protocol + '//yanzhi.lagou.com',
+        proctx: 'https://pro.lagou.com',
+        lgsctx: protocol + '//img.lagou.com',
+        FE_frontLogin: baseUrl + '//www.lagou.com/frontLogin.do',
+        FE_frontLogout: baseUrl + '//www.lagou.com/frontLogout.do',
+        FE_frontRegister: baseUrl + '//www.lagou.com/frontRegister.do'
+    };
+
+    window.GLOBAL_CDN_DOMAIN = 'img.lagou.com';
+})();*/
+</script>
+
+<!-- 页面样式 --><!-- 动态token，防御伪造请求，重复提交 -->
+<!--<script type="text/javascript">
+    window.X_Anti_Forge_Token = 'af207e27-9245-40e7-97d2-904663006001';
+    window.X_Anti_Forge_Code = '60428375';
+</script>
+-->
+<!-- H5	 -->
+<!--[if lt IE 9]>
+  	<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" type="text/css" href="//img.lagou.com/passport/static/pkg/pc/page/login/main.html_aio_d4facea.css">
+<style>
+	body{
+		background: url(img/city_4.jpg);
+		background-size: 100%,100%;
+	}
+	.sso_header1{
+		position: relative;
+		height:300px;
+		width: 100%;
+	}
+</style>
+</head>
+<body>
+<!-- 页面主体START -->
+<!--<header class="sso_header1">
+	<!--<a href="http://www.lagou.com" class="logo ">
+	</a>
+</header>-->
+<header class="sso_header1"></header>
+<section class="content_box cleafix">
+	<div class="left_area fl">
+		<form action="javascript:;">
+			<div class="form_body" data-view="loginView">
+				<div class="input_item clearfix" data-propertyname="username" data-controltype="Phone" style="display: block;">
+					<input type="text" class="input input_white" id="" name="" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off">
+				</div>
+				<div class="input_item clearfix" data-propertyname="password" data-controltype="Password" style="display: block;">
+					<input type="password" class="input input_white" id="" name="" placeholder="请输入密码" data-required="required" autocomplete="off">
+				</div>
+				<div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display:none;">
+					<input type="text" class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off">
+					<img src="" alt="" class="yzm">
+					<a rel="nofollow" href="javascript:;" class="reflash"></a>
+				</div>
+				<div class="input_item clearfix">
+					<a rel="nofollow" href="https://passport.lagou.com/accountPwd/toReset.html" class="forgot_pwd">忘记密码？</a>
+				</div>
+				<div class="input_item clearfix" data-propertyname="submit" data-controltype="Botton" style="display: block;">
+					<input type="submit" class="btn btn_green btn_active btn_block btn_lg" value="登&nbsp;录">
+				</div>
+				<div class="input_item clearfix">
+					<h5 class="reg_now">还没有账号？<a rel="" href="../register/register.html">立即注册</a></h5>
+				</div>
+				<input type="hidden" value="" id="isVisiable_request_form_verifyCode">
+			</div>
+		</form>
+	</div>
+
+	<div class="divider fl">
+		<img src="//img.lagou.com/passport/static/pc/modules/common/img/divider-login_3362138.jpg" alt="分割线">
+	</div>
+	<div class="right_area fl">
+		<h5>使用以下帐号直接登录:</h5>
+		<ul class="vender_login clearfix">
+			<li><a rel="nofollow" href="/oauth20/auth_sinaWeiboProvider.html" title="使用新浪微博帐号登录" class="vender_icon icon_sina" target="_blank" data-lg-tj-id="1jb0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"></a></li>
+			<li><a rel="nofollow" href="/oauth20/auth_qqProvider.html" title="使用腾讯QQ帐号登录" class="vender_icon icon_tencent" target="_blank" data-lg-tj-id="1jc0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"></a></li>
+			<li class="last_child"><a rel="nofollow" href="/oauth20/auth_weixinProvider.html" class="vender_icon icon_wechat" title="使用微信帐号登录" target="_blank" data-lg-tj-id="1jd0" data-lg-tj-no="idnull" data-lg-tj-cid="idnull"></a></li>
+		</ul>
+		<div class="qrcode">
+			<!--<img src="//img.lagou.com/passport/static/pc/modules/common/img/qrcode_0ec6bff.jpg" alt="二维码">
+			<p>[ 扫码下载拉勾APP ]</p>-->
+		</div>
+	</div>
+</section>
+
+<footer>
+	<h4 class="slogan">— 专注人才招聘 —</h4>
+</footer>
+<!-- 页面主体END --><!-- jquery lib -->
+<!--拉勾UI框架 -->
+<!-- analytics js file --><!-- plat analytics js file --><input type="hidden" id="serverTime" value="1489649837785">
+
+<script type="text/javascript" src="//img.lagou.com/passport/static/pkg/vendor_c7a7c93.js"></script>
+<script type="text/javascript" src="//img.lagou.com/passport/static/pkg/pc/page/login/main.html_aio_05b2501.js"></script>
+<script type="text/javascript" src="//img.lagou.com/passport/static/pkg/static_ab40326.js"></script>
+<script type="text/javascript">
+    //login page
+   /* require(['pc/page/login/main']);
+
+
+    require(['pc/modules/event/happy-3rd-birthday/main']);*/
+</script>
+
+</body><style type="text/css" id="1470526681"></style></html>
